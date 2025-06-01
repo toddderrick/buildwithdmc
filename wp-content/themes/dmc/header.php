@@ -42,7 +42,7 @@ defined('ABSPATH') || exit;
   
   <?php do_action( 'bootscore_before_masthead' ); ?>
 
-  <header id="masthead" class="<?= apply_filters('bootscore/class/header', 'sticky-top bg-body-tertiary'); ?> site-header">
+  <header id="masthead" class="<?= apply_filters('bootscore/class/header', 'dmc-navbar'); ?> site-header">
 
     <?php do_action( 'bootscore_after_masthead_open' ); ?>
     
