@@ -1,0 +1,27 @@
+/*!
+ * Bootscore custom styles
+ */
+
+// Add your own code here!
+// Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
+// Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
+
+// override admin styles
+@media screen and (min-width: 782px) {	
+	.edit-post-fullscreen-mode-close.components-button {
+		background-color: transparent;
+		border-right: 1px solid #ccc;
+		&::before {
+			content: none;
+		}
+	}
+}
+
+
+
+// navbar redesign (hide site logo, restyle home link as logo, tbd)
+@media screen and (min-width: 992px) {
+	.navbar-brand {
+		display: none !important;
+	}
+}
