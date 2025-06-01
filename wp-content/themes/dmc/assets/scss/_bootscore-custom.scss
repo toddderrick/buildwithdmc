@@ -6,23 +6,43 @@
 // Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
 // Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
 
-// override admin styles
-@media screen and (min-width: 782px) {	
-	.edit-post-fullscreen-mode-close.components-button {
-		background-color: transparent;
-		border-right: 1px solid #ccc;
-		&::before {
-			content: none;
-		}
-	}
+// global
+body.wp-child-theme-dmc {
+	font-family: https://fonts.google.com/specimen/Cabin
 }
 
+// nav
+.dmc-navbar {	
+	// navbar redesign (hide site logo, restyle home link as logo, tbd)
+	@media screen and (min-width: 992px) {
+		.navbar-brand {
+			display: none !important;
+		}
+	}
 
+	@media screen and (max-width: 991px) {
+		.navbar-brand {
+			img {
+				width: 130px;
+			}
+		}
+	}
 
-// navbar redesign (hide site logo, restyle home link as logo, tbd)
-@media screen and (min-width: 992px) {
-	.navbar-brand {
-		display: none !important;
+	.nav-toggler {
+		border: none;
+		color: #060e42;
+
+		.fa-bars {
+			font-size: 22px;
+		}
+	}
+
+	.navbar-nav {
+		.navbar-link {
+			text-transform: lowercase;
+			font-weight: 600;
+			color: #060e42;
+		}
 	}
 }
 
@@ -36,6 +56,12 @@
 			padding-top: 8%;
 		}
 	}
+	
+	.entry-content {
+		> p {
+			max-width: 720px;
+		}
+	}
 }
 
 
@@ -43,7 +69,16 @@
 body.page-id-211 {
 	.wp-block-image {
 		img {
+			width: 100%;
 			max-width: 600px;
+		}
+	}
+
+	.wp-block-media-text {
+		grid-template-columns: 29% 1fr;
+
+		@media screen and (min-width: 992px) {
+			max-width: 80%;
 		}
 	}
 }
