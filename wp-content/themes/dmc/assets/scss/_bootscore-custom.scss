@@ -6,74 +6,78 @@
 // Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
 // Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
 
-// nav
-.dmc-navbar {	
-	// navbar redesign (hide site logo, restyle home link as logo, tbd)
-	@media screen and (min-width: 992px) {
-		.navbar-brand {
-			display: none !important;
+body.wp-child-theme-dmc {
+	// nav
+	.dmc-navbar {	
+		// navbar redesign (hide site logo, restyle home link as logo, tbd)
+		@media screen and (min-width: 992px) {
+			.navbar-brand {
+				display: none !important;
+			}
 		}
-	}
 
-	@media screen and (max-width: 991px) {
-		.navbar-brand {
-			img {
-				width: 130px;
+		@media screen and (max-width: 991px) {
+			.navbar-brand {
+				img {
+					width: 130px;
+				}
+			}
+		}
+
+		.nav-toggler {
+			border: none;
+			color: #060e42;
+
+			.fa-bars {
+				font-size: 22px;
+			}
+		}
+
+		.navbar-nav {
+			.navbar-link {
+				text-transform: lowercase;
+				font-weight: 600;
+				color: #060e42;
 			}
 		}
 	}
 
-	.nav-toggler {
-		border: none;
-		color: #060e42;
 
-		.fa-bars {
-			font-size: 22px;
-		}
-	}
-
-	.navbar-nav {
-		.navbar-link {
-			text-transform: lowercase;
-			font-weight: 600;
-			color: #060e42;
-		}
-	}
-}
-
-
-// gutenburg block overrides
-@media screen and (max-width: 600px) {
-	.wp-block-media-text {
-		> .wp-block-media-text__content {
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 8%;
-		}
-	}
-
+	// default wp overrides
 	.entry-content {
 		> p {
 			max-width: 720px;
 		}
 	}
-}
 
-
-// about page overrides
-body.page-id-211 {
-	.wp-block-image {
-		img {
-			width: 100%;
-			max-width: 600px;
+	// gutenburg block overrides
+	@media screen and (max-width: 600px) {
+		.wp-block-media-text {
+			> .wp-block-media-text__content {
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 8%;
+			}
 		}
+
 	}
 
-	.wp-block-media-text {
-		grid-template-columns: 29% 1fr;
 
-		@media screen and (min-width: 992px) {
-			max-width: 80%;
+	// about page overrides
+	&.page-id-211 {
+		.wp-block-image {
+			img {
+				width: 100%;
+				max-width: 600px;
+			}
+		}
+
+		.wp-block-media-text {
+			grid-template-columns: 29% 1fr;
+
+			@media screen and (min-width: 992px) {
+				max-width: 80%;
+			}
 		}
 	}
 }
