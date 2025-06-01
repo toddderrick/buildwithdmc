@@ -37,3 +37,13 @@
 		}
 	}
 }
+
+
+// about page overrides
+body.page-id-211 {
+	.wp-block-image {
+		img {
+			max-width: 600px;
+		}
+	}
+}
