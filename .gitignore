@@ -26,7 +26,6 @@ wp-config.php
 /wp-content/themes/twenty*/
 
 # Custom themes
-/wp-content/themes/dmc/*
 /wp-content/themes/bootscore/*
 /wp-content/themes/bootscore-main/*
 /wp-content/themes/bootscore-child-main/*
