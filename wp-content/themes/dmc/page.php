@@ -26,7 +26,7 @@ get_header();
       <?php do_action( 'bootscore_after_primary_open', 'page' ); ?>
 
       <div class="row">
-        <div class="<?= apply_filters('bootscore/class/main/col', 'col'); ?>">
+        <div class="<?= apply_filters('dmc/class/main/col', 'col'); ?>">
 
           <main id="main" class="site-main">
 

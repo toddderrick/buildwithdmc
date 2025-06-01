@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
  *
  * @return string The CSS class for the main column. If a sidebar is active, it will return "col-md-8 col-lg-9". Otherwise, it will return the provided $string.
  */
-function bootscore_main_col_class_sidebar($string) {
+function dmc_main_col_class_sidebar($string) {
   if (is_active_sidebar('sidebar-1')) {
     // Sidebar is not empty
     return "col-lg-10";
@@ -27,5 +27,5 @@ function bootscore_main_col_class_sidebar($string) {
   return $string;
 }
 
-add_filter('bootscore/class/main/col', 'bootscore_main_col_class_sidebar');
+add_filter('dmc/class/main/col', 'dmc_main_col_class_sidebar');
 
