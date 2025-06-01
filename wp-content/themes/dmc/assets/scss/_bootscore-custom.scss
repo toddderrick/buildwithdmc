@@ -48,7 +48,7 @@ body.wp-child-theme-dmc {
 
 
 // gutenburg block overrides
-@media screen and (max-widht: 600px) {
+@media screen and (max-width: 600px) {
 	.wp-block-media-text {
 		> .wp-block-media-text__content {
 			padding-left: 0;
@@ -56,7 +56,7 @@ body.wp-child-theme-dmc {
 			padding-top: 8%;
 		}
 	}
-	
+
 	.entry-content {
 		> p {
 			max-width: 720px;
