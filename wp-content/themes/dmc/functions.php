@@ -13,6 +13,9 @@ defined('ABSPATH') || exit;
 // remove smart quotes for titles (kwa'lilas)
 remove_filter('the_title', 'wptexturize');
 
+// remove email confirmation (temp.)
+remove_action( 'add_option_new_admin_email', 'update_option_new_admin_email' );
+
 
 /**
  * Enqueue scripts and styles
