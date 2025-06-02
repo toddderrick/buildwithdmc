@@ -33,6 +33,11 @@ get_header();
             </div>
         </div>
 
+        <div class="dmc-hpcn">
+          <img src="https://buildwithdmc.s3.ca-central-1.amazonaws.com/marketing/dmc-hpcn-logo.png" alt />
+          <h2>Proud member of the Home Performance Contractor Network</h2>
+        </div>
+
       </main>
 
     </div>
