@@ -83,6 +83,10 @@ body.wp-child-theme-dmc {
 			overflow: hidden;
 			min-height: 400px;
 
+			@media screen and (min-width: 1200px) {
+				max-height: 650px;
+			}
+
 			.dmc-video-bg {
 				&::before {
 					content: '';
@@ -127,7 +131,16 @@ body.wp-child-theme-dmc {
 					font-size: 40px;
 					font-style: italic;
 				}
+
+				@media screen and (min-width: 1200px) {
+					left: 50%;
+					transform: translateY(-50%) translateX(-50%);
+				}
 			}
+		}
+
+		.dmc-hpcn {
+			margin: 50px 0;
 		}
 	}
 
