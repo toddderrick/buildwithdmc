@@ -1,46 +1,68 @@
 jQuery(function ($) {
 
-    // Do stuff here
+    // helper fn
+    function waitForElementAndClick(selector) {
+        const intervalId = setInterval(() => {
+            if ($(selector).length) {
+                clearInterval(intervalId);
+                $(selector).click();
+            }
+        }, 100); // Check every 100 milliseconds
+    }
 
-    // function suppressBackButton() {
-    //     window.location.hash = "_";
-    //     window.onhashchange = function() {
-    //         if (window.location.hash !== "_") {
-    //             window.location.hash = "_";
-    //         }
-    //     };
-    // }
+    function waitForElementAndAddClass(selector, className) {
+        const intervalId = setInterval(() => {
+            if ($(selector).length) {
+                clearInterval(intervalId);
+                $(selector).addClass(className);
+            }
+        }, 100); // Check every 100 milliseconds
+    }
 
-    // $(document).ready(() => {
+    // project pdp prevent back click on modal returning to plp
+    function suppressBackButtonWhenModalActive(modalSelector) {
 
-    //     // Call this function when the page loads
-    //     if (document.body.classList.contains('page-template-page-projects')) {
-            
-    //         $('.fg-thumb').forEach(thumb => {
+        const waitForModal = setInterval(() => {
+            if ($(modalSelector).length) {
+                clearInterval(waitForModal);
 
-    //             thumb.addEventListener('click', () => {
-    //                 if (window.location.hash !== "_") {
-    //                     suppressBackButton();
-    //                 }
+                // apply hash to prevent back button
+                window.location.hash = "projectview";
+                window.onhashchange = function() {
+                    // add hash to url and then force url back to same url if changed
+                    // preventing the user from going back to projects plp
+                    // instead click the modal close but keep them on projects pdp
+                    if (window.location.hash !== "projectview") {
+                        window.location.hash = "projectview";
+                    }
 
-    //             });
+                    // check for don't close class after delay to avoid 
+                    // immediate close on first open, also delay enhances ux
+                    setTimeout(() => {
+                        if (document.querySelectorAll(".dmc-dont-close-modal").length === 0 && document.querySelectorAll(".fg-panel-button-close").length) {
+                            waitForElementAndClick(".fg-panel-button-close");
+                        }
 
-    //         });
+                        document.querySelectorAll(".fg-panel").length && document.querySelector(".fg-panel").classList.remove("dmc-dont-close-modal");
+                    }, 400);
 
-    //     }
+                };
+            }
 
-    // });    
+        }, 600); // Check every 600 milliseconds
 
-    $(window).on('popstate', function(event) {
-        // Your code to handle the back button click here
-        console.log("Back button was pressed!");
+    }
 
-        if (document.querySelectorAll('.fg-panel').length && document.body.classList.contains('page-template-page-projects')) {
-            console.log("Should close modal");
-            // if (document.querySelectorAll('.fg-panel-button-close').length) {
-            //     document.querySelector('.fg-panel-button-close').click();
-            // }
-        }
-    });
+    
+    // init
+
+    // check on projects pdp and then wait for modal and suppress back button clicks
+    if (document.body.classList.contains("page-template-page-projects")) {
+        suppressBackButtonWhenModalActive(".fg-panel");
+
+        $("body").on("click", ".fg-thumb", () => {
+            waitForElementAndAddClass(".fg-panel", "dmc-dont-close-modal");
+        });
+    }
 
 }); // jQuery End
