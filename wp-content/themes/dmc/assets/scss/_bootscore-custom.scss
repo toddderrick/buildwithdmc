@@ -33,11 +33,36 @@ body.wp-child-theme-dmc {
 			}
 		}
 
+		@media screen and (max-width: 991px) {
+			.offcanvas-body {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+		}
+
 		.navbar-nav {
 			.nav-link {
 				text-transform: lowercase;
+				font-size: 18px;
 				font-weight: 600;
+				letter-spacing: 0.075em;
 				color: #2637ab;
+			}
+
+			@media screen and (max-width: 991px) {
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+
+			@media screen and (min-width: 992px) {
+				margin-left: auto !important;
+				margin-right: auto !important;
+
+				.menu-item {
+					&:first-of-type {
+						margin-left: -80px;
+					}
+				}
 			}
 		}
 
@@ -57,6 +82,10 @@ body.wp-child-theme-dmc {
 					padding-right: 10px;
 
 					a {
+						font-size: 18px;
+						font-weight: 600;
+						letter-spacing: 0.075em;
+
 						&::after {
 							content: '•';
 							position: relative;
