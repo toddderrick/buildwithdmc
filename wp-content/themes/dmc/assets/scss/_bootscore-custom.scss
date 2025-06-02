@@ -42,6 +42,13 @@ body.wp-child-theme-dmc {
 		}
 	}
 
+	// footer
+	.dmc-footer {
+		.bootscore-footer-columns {
+			display: none;
+		}
+	}
+
 
 	// default wp overrides
 	.entry-content {
@@ -95,7 +102,7 @@ body.wp-child-theme-dmc {
 
 			&:hover {
 				color: #0d1e8e;
-				
+
 				span {
 					text-decoration: underline;
 				}
