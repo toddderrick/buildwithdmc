@@ -39,7 +39,7 @@ get_header();
         </div>
 
         <div class="dmc-carousel">
-          tbd
+          <?php echo do_shortcode('[foogallery id="269"]'); ?>
         </div>
 
       </main>
