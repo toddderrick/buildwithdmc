@@ -25,6 +25,10 @@ get_header();
 
           <main id="main" class="site-main">
 
+            <div class="dmc-all-projects-link">
+              <a href="/projects"><i class="fa-solid fa-chevron-left"></i> <span>Back to projects</span></a>
+            </div>
+
             <div class="entry-header">
               <?php the_post(); ?>
               <?php do_action( 'bootscore_before_title', 'page' ); ?>
@@ -36,10 +40,6 @@ get_header();
             <?php do_action( 'bootscore_after_featured_image', 'page' ); ?>
 
             <div class="entry-content">
-              <div class="dmc-all-projects-link">
-                <a href="/projects"><i class="fa-solid fa-chevron-left"></i> <span>Back to projects</span></a>
-              </div>
-
               <?php the_content(); ?>
             </div>
             
