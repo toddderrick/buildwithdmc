@@ -38,6 +38,10 @@ get_header();
           <h2>Proud member of the Home Performance Contractor Network</h2>
         </div>
 
+        <div class="dmc-carousel">
+          <?php echo do_shortcode("[foogallery id="269"]"); ?>
+        </div>
+
       </main>
 
     </div>
