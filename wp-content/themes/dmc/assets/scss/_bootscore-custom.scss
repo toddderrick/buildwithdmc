@@ -70,6 +70,42 @@ body.wp-child-theme-dmc {
 	}
 
 
+	// home page overrides
+	&.page-template-page-home {
+		.dmc-video-bg {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.7);
+				z-index: 1;
+			}
+
+			video {
+				filter: blur(8px);
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+
+		.dmc-site-content.dmc-page-home {
+			.entry-content {
+				position: relative;
+				z-index: 1;
+				top: 200px;
+				left: 50px;
+				p {
+					color: rgb(180, 140, 0);
+					font-size: 40px;
+					font-style: italic;
+				}
+			}
+		}
+	}
+
+
 	// about page overrides
 	&.page-id-211 {
 		.wp-block-image {
@@ -89,7 +125,7 @@ body.wp-child-theme-dmc {
 	}
 
 
-	// projects page overrides
+	// projects page plp overrides
 	&.page-id-235 {
 		.wp-block-list {
 			line-height: 24px;
