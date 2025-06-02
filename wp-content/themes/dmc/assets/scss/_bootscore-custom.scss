@@ -40,6 +40,55 @@ body.wp-child-theme-dmc {
 				color: #2637ab;
 			}
 		}
+
+
+		// mobile hide logo item
+		.offcanvas-body {
+			@media screen and (max-width: 991px) {
+				.menu-item-home {
+					display: none;
+				}
+			}
+
+			@media screen and (min-width: 992px) {
+				.menu-item {
+					display: flex;
+					align-items: center;
+					padding-right: 10px;
+
+					a {
+						&::after {
+							content: '•';
+							position: relative;
+							right: -13px;
+						}
+					}
+
+					// overrides (logo link and last item)
+					&.menu-item-home, &:nth-of-type(3), &:last-of-type {
+						padding-right: 0;
+						
+						a {
+							&::after {
+								content: none;
+							}
+						}
+
+					}
+				}
+
+				.menu-item-home {
+					a {
+						font-size: 0;
+						text-indent: -9999px;
+						background: transparent url('//buildwithdmc.s3.ca-central-1.amazonaws.com/wp-content/uploads/2025/06/01231111/dmc-logo.svg') center center no-repeat;
+						background-size: contain;
+						min-width: 220px;
+						height: 70px;
+					}
+				}
+			}
+		}
 	}
 
 	// footer
