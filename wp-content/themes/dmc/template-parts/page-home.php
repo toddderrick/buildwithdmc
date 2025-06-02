@@ -25,12 +25,12 @@ get_header();
               <video autoplay muted loop id="myVideo">
                 <source src="https://buildwithdmc.s3.ca-central-1.amazonaws.com/videos/home-video-1.mp4" type="video/mp4">
               </video>
-            </div>
-        </div>
 
-        <div class="entry-content">
-          <?php the_post(); ?>
-          <?php the_content(); ?>
+              <div class="entry-content">
+                <?php the_post(); ?>
+                <?php the_content(); ?>
+              </div>
+            </div>
         </div>
 
       </main>

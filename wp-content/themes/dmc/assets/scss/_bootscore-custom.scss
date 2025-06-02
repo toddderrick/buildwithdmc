@@ -72,6 +72,17 @@ body.wp-child-theme-dmc {
 
 	// home page overrides
 	&.page-template-page-home {
+		// hide footer
+		.dmc-footer {
+			display: none;
+		}
+
+		// hero
+		.dmc-hero {
+			position: relative;
+			overflow: hidden;
+		}
+
 		.dmc-video-bg {
 			&::before {
 				content: '';
