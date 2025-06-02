@@ -37,7 +37,7 @@ body.wp-child-theme-dmc {
 			.nav-link {
 				text-transform: lowercase;
 				font-weight: 600;
-				color: #060e42;
+				color: #2637ab;
 			}
 		}
 	}
@@ -77,6 +77,32 @@ body.wp-child-theme-dmc {
 
 			@media screen and (min-width: 992px) {
 				max-width: 80%;
+			}
+		}
+	}
+
+
+	// projects pdp
+	.dmc-all-projects-link {
+		margin-top: 20px;
+		margin-bottom: 40px;
+
+		a {
+			text-transform: uppercase;
+			font-weight: 700;
+			text-decoration: none;
+			color: #2637ab;
+
+			&:hover {
+				color: #0d1e8e;
+				
+				span {
+					text-decoration: underline;
+				}
+			}
+
+			i {
+				margin-right: 3px;
 			}
 		}
 	}

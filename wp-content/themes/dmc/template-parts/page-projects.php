@@ -36,8 +36,8 @@ get_header();
             <?php do_action( 'bootscore_after_featured_image', 'page' ); ?>
 
             <div class="entry-content">
-              <div class="dmc-all-projects">
-                <a href="/projects"><i class="fa-chevron-left"></i> Back to projects</a>
+              <div class="dmc-all-projects-link">
+                <a href="/projects"><i class="fa-solid fa-chevron-left"></i> <span>Back to projects</span></a>
               </div>
 
               <?php the_content(); ?>
