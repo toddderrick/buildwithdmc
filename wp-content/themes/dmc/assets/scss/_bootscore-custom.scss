@@ -89,6 +89,17 @@ body.wp-child-theme-dmc {
 	}
 
 
+	// projects page overrides
+	&.page-id-235 {
+		.wp-block-list {
+			line-height: 24px;
+
+			li {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
 	// projects pdp
 	.dmc-all-projects-link {
 		margin-top: 20px;
