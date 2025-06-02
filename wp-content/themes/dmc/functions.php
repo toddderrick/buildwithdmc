@@ -10,6 +10,9 @@
 // Exit if accessed directly
 defined('ABSPATH') || exit;
 
+// remove smart quotes for titles (kwa'lilas)
+remove_filter('the_title', 'wptexturize');
+
 
 /**
  * Enqueue scripts and styles
