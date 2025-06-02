@@ -7,6 +7,14 @@
 // Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
 
 body.wp-child-theme-dmc {
+	
+	// fix z-index issue with offcanvas nav and foobar message
+	@media screen and (max-width: 991px) {
+		.foobar-message.fbr-layout-top {
+			z-index: 1039 !important;
+		}
+	}
+
 	// nav
 	.dmc-navbar {	
 		// navbar redesign (hide site logo, restyle home link as logo, tbd)
