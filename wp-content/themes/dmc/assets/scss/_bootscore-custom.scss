@@ -263,12 +263,12 @@ body.wp-child-theme-dmc {
 
 	// about page overrides
 	&.page-id-211 {
-		.wp-block-image {
-			img {
-				width: 100%;
-				max-width: 600px;
-			}
-		}
+		// .wp-block-image {
+		// 	img {
+		// 		width: 100%;
+		// 		max-width: 600px;
+		// 	}
+		// }
 
 		.wp-block-media-text {
 			grid-template-columns: 29% 1fr;
