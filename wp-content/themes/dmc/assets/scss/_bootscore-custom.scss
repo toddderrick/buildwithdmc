@@ -139,7 +139,9 @@ body.wp-child-theme-dmc {
 	// default wp overrides
 	.entry-content {
 		> p {
-			max-width: 720px;
+			max-width: 840px;
+			font-size: 18px;
+			line-height: 28px;
 		}
 	}
 
@@ -263,13 +265,6 @@ body.wp-child-theme-dmc {
 
 	// about page overrides
 	&.page-id-211 {
-		// .wp-block-image {
-		// 	img {
-		// 		width: 100%;
-		// 		max-width: 600px;
-		// 	}
-		// }
-
 		.wp-block-media-text {
 			grid-template-columns: 29% 1fr;
 
@@ -312,6 +307,33 @@ body.wp-child-theme-dmc {
 
 			i {
 				margin-right: 3px;
+			}
+		}
+	}
+
+	// services
+	.dmc-services {
+		display: grid;
+		gap: 30px;
+		grid-template-columns: 1fr;
+
+		@media screen and (min-width: 992px) {
+			gap: 60px;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.dmc-service {
+			> div {
+				padding: 20px 20px 0 0;
+			}
+
+			h3 {
+				max-width: 400px;
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 28px;
 			}
 		}
 	}
