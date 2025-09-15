@@ -217,7 +217,13 @@ body.wp-child-theme-dmc {
 					max-width: 66%;
 					color: #fff;
 					font-size: 40px;
+					line-height: 52px;
 					font-style: italic;
+
+					@media screen and (max-width: 479px) {
+						font-size: 32px;
+						line-height: 42px;
+					}
 				}
 
 				@media screen and (min-width: 1200px) {
