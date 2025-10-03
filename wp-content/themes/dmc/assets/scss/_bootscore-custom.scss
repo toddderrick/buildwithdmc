@@ -298,9 +298,15 @@ body.wp-child-theme-dmc {
 					}
 
 					h2 {
-						max-width: 240px;
+						max-width: 340px;
 					}
 				}
+
+				@media screen and (max-width: 600px) {
+					h2 {
+						max-width: 240px;
+					}
+				} 
 			}
 
 			.dmc-member-of--cleanbc {
@@ -320,6 +326,12 @@ body.wp-child-theme-dmc {
 					text-align: center;
 					max-width: 400px;
 				}
+				
+				@media screen and (max-width: 600px) {
+					h2 {
+						max-width: 240px;
+					}
+				} 
 			}
 		}
 
