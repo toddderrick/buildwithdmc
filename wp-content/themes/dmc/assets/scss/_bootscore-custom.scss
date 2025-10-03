@@ -264,11 +264,14 @@ body.wp-child-theme-dmc {
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					flex-direction: column;
 				}
 
 				@media screen and (max-width: 991px) {
 					h2 {
 						font-size: 28px;
+						text-align: center;
+						max-width: 400px;
 					}
 				}
 
@@ -286,21 +289,22 @@ body.wp-child-theme-dmc {
 
 				@media screen and (max-width: 991px) {
 					img {
-						max-width: 125px;
+						max-width: 175px;
+					}
+
+					h2 {
+
 					}
 				}
 			}
 
 			.dmc-member-of--cleanbc {
-				display: flex;
-				flex-direction: column;
-
 				img {
 					max-width: 80%;
 					height: auto;
 
 					@media screen and (max-width: 991px) {
-						max-width: 380px;
+						max-width: 340px;
 					}
 				}
 
