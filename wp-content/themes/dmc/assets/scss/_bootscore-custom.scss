@@ -259,12 +259,10 @@ body.wp-child-theme-dmc {
 				}
 
 				> div {
-					margin: 50px auto;
 					padding: 0 30px;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					flex-direction: column;
 				}
 
 				@media screen and (max-width: 991px) {
@@ -285,6 +283,9 @@ body.wp-child-theme-dmc {
 			}
 
 			.dmc-member-of--hpcn {
+				margin: 50px auto;
+				flex-direction: column;
+
 				img {
 					max-width: 250px;
 				}
@@ -313,6 +314,8 @@ body.wp-child-theme-dmc {
 
 				h2 {
 					margin-top: 30px;
+					text-align: center;
+					max-width: 400px;
 				}
 			}
 		}
