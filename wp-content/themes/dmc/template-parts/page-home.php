@@ -21,21 +21,31 @@ get_header();
       <main id="main" class="site-main">
 
         <div class="dmc-hero">
-            <div class="dmc-video-bg">
-              <video autoplay muted loop id="myVideo">
-                <source src="https://buildwithdmc.s3.ca-central-1.amazonaws.com/videos/home-video-1.mp4" type="video/mp4">
-              </video>
+          <div class="dmc-video-bg">
+            <video autoplay muted loop id="myVideo">
+              <source src="https://buildwithdmc.s3.ca-central-1.amazonaws.com/videos/home-video-1.mp4" type="video/mp4">
+            </video>
 
-              <div class="entry-content">
-                <?php the_post(); ?>
-                <?php the_content(); ?>
-              </div>
+            <div class="entry-content">
+              <?php the_post(); ?>
+              <?php the_content(); ?>
             </div>
+          </div>
         </div>
 
-        <div class="dmc-hpcn">
-          <img src="https://buildwithdmc.s3.ca-central-1.amazonaws.com/marketing/dmc-hpcn-logo.png" alt />
-          <h2>Proud member of the Home Performance Contractor Network</h2>
+        <div class="dmc-member-of-container">
+          <div class="dmc-member-of">
+            <div class="dmc-member-of--hpcn">
+              <img src="https://buildwithdmc.s3.ca-central-1.amazonaws.com/marketing/dmc-hpcn-logo.png" alt />
+              <h2>Proud member of the Home Performance Contractor Network</h2>
+            </div>
+          </div>
+          <div class="dmc-member-of">
+            <div class="dmc-member-of--cleanbc">
+              <img src="https://buildwithdmc.s3.ca-central-1.amazonaws.com/marketing/dmc-cleanbc-logo.jpg" alt />
+              <h2>Eligible installer for CleanBC window and door rebates</h2>
+            </div>
+          </div>
         </div>
 
         <div class="dmc-carousel">
