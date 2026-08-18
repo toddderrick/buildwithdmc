@@ -185,11 +185,13 @@ body.wp-child-theme-dmc {
 					background-color: rgba(0, 0, 0, 0.7);
 					z-index: 1;
 					backdrop-filter: blur(3px);
+					pointer-events: none;
 				}
 
 				video {
 					width: 100%;
 					max-width: 100%;
+					pointer-events: auto;
 				}
 			}
 
