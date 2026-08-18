@@ -56,21 +56,19 @@ jQuery(function ($) {
     // video playback failsafe
     function videoPlaybackFailsafe(videoId) { 
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const video = document.getElementById(videoId);
+        const video = document.getElementById(videoId);
 
-            // Ensure elements are strictly muted before triggering playback
-            video.muted = true; 
+        // Ensure it is programatically muted
+        video.muted = true; 
 
-            video.play().catch((error) => {
-                console.log("Autoplay blocked by Safari: ", error);
+        video.play().catch((error) => {
+            console.log("Autoplay blocked by Safari: ", error);
 
-                // Fallback: Attempt to trigger play on the very first touch/click anywhere on the page
-                document.addEventListener("touchstart", () => {
-                    console.log("DMC trigger video failsafe");
-                    video.play();
-                }, { once: true });
-            });
+            // Fallback: Play on the very first touch/click anywhere on the window
+            window.addEventListener("click", () => {
+                console.log("DMC trigger video failsafe");
+                video.play();
+            }, { once: true });
         });
 
     }
