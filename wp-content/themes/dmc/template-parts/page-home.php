@@ -22,7 +22,7 @@ get_header();
 
         <div class="dmc-hero">
           <div class="dmc-video-bg">
-            <video autoplay muted playsinline loop id="myVideo">
+            <video autoplay muted playsinline loop crossorigin="anonymous" id="myVideo">
               <source src="https://buildwithdmc.s3.ca-central-1.amazonaws.com/videos/home-video-1.mp4" type="video/mp4">
             </video>
 
