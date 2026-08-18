@@ -53,6 +53,28 @@ jQuery(function ($) {
 
     }
 
+    // video playback failsafe
+    function videoPlaybackFailsafe(videoId) { 
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById(videoId);
+
+            // Ensure elements are strictly muted before triggering playback
+            video.muted = true; 
+
+            video.play().catch((error) => {
+                console.log("Autoplay blocked by Safari: ", error);
+
+                // Fallback: Attempt to trigger play on the very first touch/click anywhere on the page
+                document.addEventListener("touchstart", () => {
+                    console.log("DMC trigger video failsafe");
+                    video.play();
+                }, { once: true });
+            });
+        });
+
+    }
+
     
     // init
 
@@ -63,6 +85,14 @@ jQuery(function ($) {
         $("body").on("click", ".fg-thumb", () => {
             waitForElementAndAddClass(".fg-panel", "dmc-dont-close-modal");
         });
+    }
+
+    // check on home page and then add failsafe for video playback
+    if (document.body.classList.contains("page-template-page-home")) {
+
+        console.log("DMC Video Failsafe");
+        videoPlaybackFailsafe("myVideo");
+        
     }
 
 }); // jQuery End
